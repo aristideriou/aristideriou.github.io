@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<style type="text/css">
+		#container{
+			text-align: center;
+			font-family: 'Courier New', Courier, monospace;
+			width: 800px;
+		}
+
+		#titre{
+			font-size: 60px;
+			color: blueviolet;
+		}
+	</style>
+
 	<script>
-		window.dataLayer = [{'productCategory' : 'shoes'}];
+		window.dataLayer = [{
+			'productCategory' : 'shoes'
+			}];
 	</script>
 
 	<!-- Google Tag Manager -->
@@ -17,14 +33,25 @@
 </head>
 <body>
 
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNGQ62F"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+	<div id="container">
+		<h1 id='titre'>C'EST DISKOUNT, LE SHOPING PAS CHER ET DE KALITAY</h1>
 
-	<button id='top'>Ajotuer à la wishlist</button>
+		<h2>Hanspinner couleur rouge, en oxyde de lynx chromé</h2>
+	
+		<img src="handspinner.jpg " alt="handspinner">
 
-	<button id='bottom'>Ajouter à la wishlist (mais plus bas)</button>
+		<br>
+		<button id='top'>Ajouter à la wishlist</button>
+
+		<p>
+		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quos odit quibusdam inventore ex consequatur doloremque repellendus reiciendis in quidem perspiciatis eveniet vitae, voluptatem enim? Exercitationem ducimus neque porro rem.
+		</p>	
+
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		<button id='bottom'>Ajouter à la wishlist (mais plus bas dans la page)</button>
+	</div>
+
+	
 
 </body>
 </html>
