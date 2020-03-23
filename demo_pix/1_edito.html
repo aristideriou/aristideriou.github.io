@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 	<meta charset="utf-8">
-
 	<title>1 - Edito</title>
-
 	<script>
 		var dataLayer = [{
 			'mdUserID' : '123456',
@@ -49,7 +48,7 @@
 		<script type="text/javascript">
 			let dlContainer = document.getElementById('dl-content')
 			for (const property in dataLayer[0]) {
-				dlContainer.insertAdjacentHTML("beforeend",`<p>${property}: ${dataLayer[0][property]}</p>`); 
+				dlContainer.insertAdjacentHTML("beforeend",`<p>${property}: <b> ${dataLayer[0][property]} </b> </p>`); 
 			}
 
 	</script>
