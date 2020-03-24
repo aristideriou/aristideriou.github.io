@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
-	<meta charset="utf-8">
+	<link rel='shortcut icon' href='data:image/x-icon;,' type='image/x-icon'> 
+	<meta charset='utf-8'>
 	<title>1 - Edito</title>
 	<script>
 		var dataLayer = [{
@@ -34,24 +34,48 @@
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ3SFGG"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-PJ3SFGG'
+		height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
+
+		<ul>
+			<li><a href='/1_edito.html'>Vers page edito</a></li>
+			<li><a href='/2_cart.html'>Vers page panier</a></li>
+			<li><a href='/3_checkout_steps.html'>Vers page checkout step</a></li>
+			<li><a href='/4_complete.html'>Vers page validation de commande</a></li>
+
+		</ul>
+
 
 		<h1>Page edito</h1>
 
-		<button>Test promo click</button>
+		<button data-gtmctaabo="Abonnement mensuel | 123456" = >Test promo click</button> <br>
+
+		<button id='grand-compte'>Test inscription grand compte</button> <br>
+
+		<button data-gtmsearchadvbgmenu='Interview' >Test CtA de la recherche avancée burger menu</button>
 
 		<p>Le contenu du dataLayer est le suivant :</p>
-		<div id="dl-content"></div>
+		<div id='dl-content'></div>
 
-		<script type="text/javascript">
+		<script type='text/javascript'>
 			let dlContainer = document.getElementById('dl-content')
 			for (const property in dataLayer[0]) {
-				dlContainer.insertAdjacentHTML("beforeend",`<p>${property}: <b> ${dataLayer[0][property]} </b> </p>`); 
+				dlContainer.insertAdjacentHTML('beforeend',`<p>${property}: <b> ${dataLayer[0][property]} </b> </p>`); 
 			}
 
-	</script>
+			const grandCompte = document.getElementById('grand-compte');
+
+			grandCompte.addEventListener('click', (event) => {
+				dataLayer.push({
+					'event' : 'GCsubscription',
+					'typeSubscription' : 'Inscription gratuite'
+				})
+			});
+
+			
+
+		</script>
 		
 	</body>
 	</html>
