@@ -1,0 +1,56 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul{
+    display: flex;
+}
+
+header li{
+    list-style: none;
+    padding: 12px;
+}
+
+#search_bar{
+    justify-content: stretch;
+    padding: 0px;
+    border: 1px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 6px 0px rgba(66,63,66,0.2);
+    transition: font-weight 1s;
+    transition: box-shadow 1s;
+}
+
+#search_bar:hover, #search_bar:focus{
+    font-weight: bold;
+    box-shadow: 0px 0px 16px 0px rgba(66,63,66,0.2);
+}
+
+#search_bar li:not(:last-of-type){
+    border-right: 1px solid #EBEBEB;
+}
+
+#search_picto{
+    color: #FF385C;
+}
+
+#login_bar li{
+    font-weight: bolder;
+    color: black;
+    padding: 8px 17px;
+    margin-left: 10px;
+}
+
+#login_bar li:hover{
+    border-radius: 18px;
+    background-color: #F7F7F7;
+}
+
+
+#header_login_bar_register{
+    box-shadow: 0px 0px 6px 0px rgba(66,63,66,0.2);
+    /* border: 1px solid grey; */
+    border-radius: 18px;
+}
