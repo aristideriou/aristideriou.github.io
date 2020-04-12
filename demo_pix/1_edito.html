@@ -6,11 +6,15 @@
 	<title>1 - Edito</title>
 	
 	<!-- Démarrage de mention de consentement aux cookies de OneTrust -->
-	<script src="https://cdn.cookielaw.org/consent/2d7581a7-4b94-4b74-8044-25c0ab82afc4.js" type="text/javascript" charset="UTF-8"></script>
+	
+	<script src="https://optanon.blob.core.windows.net/consent/2d7581a7-4b94-4b74-8044-25c0ab82afc4.js" type="text/javascript" charset="UTF-8"></script>
 	
 	<script type="text/javascript">
+		
 		function OptanonWrapper() { }
+		
 	</script>
+	
 	<!-- Fin de mention de consentement aux cookies de OneTrust -->
 	
 	<script>
@@ -67,6 +71,10 @@
 		<div id='dl-content'></div>
 		
 		<button class="optanon-show-settings">Test "paramétrer les cookies" OneTrust</button>
+		
+		<!-- Début de la liste des Cookies OneTrust -->
+		<div id="optanon-cookie-policy"></div>
+		<!-- Fin de la liste des Cookies OneTrust -->
 		
 		<script type='text/javascript'>
 			let dlContainer = document.getElementById('dl-content')
