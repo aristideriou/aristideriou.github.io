@@ -4,6 +4,14 @@
 	<link rel='shortcut icon' href='data:image/x-icon;,' type='image/x-icon'> 
 	<meta charset='utf-8'>
 	<title>1 - Edito</title>
+	
+	<!-- Démarrage de mention de consentement aux cookies de OneTrust -->
+	<script src="https://cdn.cookielaw.org/langswitch/8f588cd3-dea6-43b1-bc90-51f94f0e2406.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() {}
+	</script>
+	<!-- Fin de mention de consentement aux cookies de OneTrust -->
+	
 	<script>
 		var dataLayer = [{
 			'mdUserID' : '123456',
@@ -22,58 +30,60 @@
 			'mdAbo': 'annuel'
 		}]
 	</script>
-
-
+	
+	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PJ3SFGG');</script>
-<!-- End Google Tag Manager -->
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PJ3SFGG');</script>
+	<!-- End Google Tag Manager -->
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-PJ3SFGG'
 		height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-
+		
 		<ul>
 			<li><a href='https://aristideriou.github.io/demo_pix/1_edito'>Vers page edito</a></li>
 			<li><a href='https://aristideriou.github.io/demo_pix/2_cart'>Vers page panier</a></li>
 			<li><a href='https://aristideriou.github.io/demo_pix/3_checkout_steps'>Vers page checkout step</a></li>
 			<li><a href='https://aristideriou.github.io/demo_pix/4_complete'>Vers page validation de commande</a></li>
 		</ul>
-
-
+		
+		
 		<h1>Page edito</h1>
-
+		
 		<button data-gtmctaabo="Abonnement mensuel | 123456" = >Test promo click</button> <br>
-
+		
 		<button id='grand-compte'>Test inscription grand compte</button> <br>
-
+		
 		<button data-gtmsearchadvbgmenu='Interview' >Test CtA de la recherche avancée burger menu</button>
-
+		
 		<p>Le contenu du dataLayer est le suivant :</p>
 		<div id='dl-content'></div>
 
+		<button class="optanon-show-settings">Test "paramétrer les cookies" OneTrust</button>
+		
 		<script type='text/javascript'>
 			let dlContainer = document.getElementById('dl-content')
 			for (const property in dataLayer[0]) {
 				dlContainer.insertAdjacentHTML('beforeend',`<p>${property}: <b> ${dataLayer[0][property]} </b> </p>`); 
 			}
-
+			
 			const grandCompte = document.getElementById('grand-compte');
-
+			
 			grandCompte.addEventListener('click', (event) => {
 				dataLayer.push({
 					'event' : 'GCsubscription',
 					'typeSubscription' : 'Inscription gratuite'
 				})
 			});
-
 			
-
+			
+			
 		</script>
 		
 	</body>
