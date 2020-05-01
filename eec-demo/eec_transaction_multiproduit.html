@@ -27,9 +27,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction EEC - Mauvaise pratique</title>
+    
 </head>
 <body>
     <h1>Bravo, vous avez validé votre commande (mais avec un data layer à plat) / multiproduit</h1>
+
+    <p>Le contenu du dataLayer est le suivant :</p>
+		<div id='dl-content'></div>
     
 </body>
+
+<script type='text/javascript'>
+    let dlContainer = document.getElementById('dl-content')
+    for (const property in dataLayer[0]) {
+        dlContainer.insertAdjacentHTML('beforeend',`<p>${property}: <b> ${dataLayer[0][property]} </b> </p>`); 
+    }
+</script>
 </html>
