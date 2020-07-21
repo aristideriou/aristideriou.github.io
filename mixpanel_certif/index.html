@@ -7,12 +7,22 @@
     MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
     mixpanel.init("ba572be480dbaaf17f9e5a13916a16d9", {"api_host": "api-eu.mixpanel.com", batch_requests: true})</script>
     
+    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mixpanel demo</title>
     </head>
     <body>
-        
+        <div id="play">Click to play video ▶</div>
     </body>
     </html>
+
+    <script>
+        const video = document.getElementById('play');
+        const mixpanelEvent = () => {
+            console.log('button clicked');
+            mixpanel.track("Video play", {"genre": "hip-hop", "duration in seconds": 42});
+        };
+        video.addEventListener('click',mixpanelEvent);
+    </script>
