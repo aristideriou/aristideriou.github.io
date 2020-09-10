@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var tc_vars = {
+            is_lp: "no",
+            service: "onboarding mineur",
+            template_name: ""
+        }
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests MFB TagCO</title>
+    <script src="https://cdn.tagcommander.com/4249/tc_MaFrenchBank_20.js"></script>
+    <script src="https://cdn.tagcommander.com/4249/uat/tc_MaFrenchBank_21.js"></script>
+    <script src="https://cdn.tagcommander.com/4249/tc_MaFrenchBank_22.js"></script>
+</head>
+<body>
+    <h2>Cette page appelle le container TagCo UAT</h2>
+    
+    <button id="tagco">Test clic TagCo</button>
+    
+</body>
+</html>
+<script>
+    setTimeout(function () {      
+        tc_events_global(this,"PAGELOAD",{
+            'event_label':'ardoise::ajout_transfert::confirmation',
+            'motif_ouverture_compte':'jaime les gato',
+            'level_2':'1',
+            'erreur':'il y a une erreur',
+            'page_precedente':'prev',
+            'nom_dossier':'dupont',
+            'piece_identite':'carte identité',
+            'montant':'321321'
+        });
+        console.log('Le montant est : '+tc_array_events["montant"]);
+    },2000);
+    
+    
+    var foo = document.getElementById("tagco");
+    
+    foo.addEventListener("click", function(){
+        tc_events_global(this,"CLICK",{
+            'eventname_at':'clic flèche droite slider',
+        });
+        
+    });
+    
+</script>
