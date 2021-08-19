@@ -29,7 +29,18 @@
         
         <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
         
+        <button id="cookies_deletion">Delete all OneTrust ccokies</button>
         
         
     </body>
     </html>
+
+    <script>
+        const button = document.getElementById("cookies_deletion");
+        button.addEventListener('click', ()=> {
+            console.log('cookie');
+            document.cookie = "OptanonAlertBoxClosed=xxx; expires=Thu, 18 Dec 1970 12:00:00 UTC; path=/";
+            document.cookie = "OptanonConsent=xxx; expires=Thu, 18 Dec 1970 12:00:00 UTC; path=/";
+
+        })
+    </script>
