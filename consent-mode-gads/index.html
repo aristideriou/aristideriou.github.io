@@ -28,7 +28,7 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <h1>Consent Mode testing</h1>
-        <button>Add to cart</button>
+        <button id="cart">Add to cart</button>
 
         <br><br><br><br><br><br><br><br><br><br><br>
         
@@ -38,3 +38,11 @@
         <!-- OneTrust Cookies Settings button end -->
     </body>
     </html>
+
+    <script>
+        document.getElementById('cart').addEventListener('click', ()=> {
+            dataLayer.push({
+                'event' : 'addToCart'
+            })
+        })
+    </script>
