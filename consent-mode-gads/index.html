@@ -29,20 +29,44 @@
         <!-- End Google Tag Manager (noscript) -->
         <h1>Consent Mode testing</h1>
         <button id="cart">Add to cart</button>
-
-        <br><br><br><br><br><br><br><br><br><br><br>
         
+        <button id="purchase">Purchase</button>
+        
+        <br><br><br><br><br><br><br><br><br><br><br>
         
         <!-- OneTrust Cookies Settings button start -->
         <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
         <!-- OneTrust Cookies Settings button end -->
     </body>
     </html>
-
+    
     <script>
         document.getElementById('cart').addEventListener('click', ()=> {
             dataLayer.push({
                 'event' : 'addToCart'
             })
-        })
+        });
+        
+        document.getElementById('purchase').addEventListener('click', ()=> {
+            dataLayer.push({
+                'event' : 'purchase',
+                'purchase' : {
+                    transaction_id: 'T_12345',
+                    affiliation: 'Google Merchandise Store',
+                    value: 25.42,
+                    currency: 'EUR',
+                    coupon: 'SUMMER_SALE',
+                    items: [{
+                        item_id: "SKU_12345",
+                        name : 'foo',
+                        quantity: 1
+                    },
+                    {
+                        item_id: "SKU_12346",
+                        name : 'bar',
+                        quantity: 1
+                    }]
+                }
+            });
+        });
     </script>
