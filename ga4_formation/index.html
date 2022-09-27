@@ -57,7 +57,7 @@
     
     <a href='blabla.pdf' target='_blank'>Cliquez ici pour télécharger le PDF de la formation</a>
 
-    <br><br><button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+    <br><br><button id="ot-sdk-btn" class="ot-sdk-show-settings">Paramétrerles cookies</button>
 
     
 </body>
@@ -93,6 +93,7 @@
 <script>
     const purchase = document.getElementById('purchase');
     purchase.addEventListener('click',()=> {
+        purchase.innerHTML = 'Votre achat a été validé et votre carte bleue débitée'
         dataLayer.push({
             'event' : 'purchase',
             'purchase' : {
@@ -121,7 +122,6 @@
 </script>
 
 <script>
-    
     
     function checkGTM(){
         if(typeof google_tag_manager !== 'undefined'){
