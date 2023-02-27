@@ -28,6 +28,17 @@
 </head>
 <body>
     
+    <script type="text/javascript">
+        (function(window, document, dataLayerName, id) {
+            window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+            function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}
+            var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+            var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
+            tags.async=!0,tags.src="https://mgp.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+            !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+        })(window, document, 'dataLayer', '0946a2c6-0c1d-4382-b0e8-6f92746b6105');
+    </script>
+    
     <h1>Démo & formation Piwik Pro</h1>
     
     <button id='push'>Changer virtuellement l'URL et ajouter une route</button>
@@ -39,7 +50,7 @@
     <p>Google Analytics soulève des problèmes de confidentialité. Chaque fois qu'un utilisateur visite un site web qui intègre Google Analytics, Google suit cette visite via l'adresse IP de l'utilisateur afin de déterminer sa position géographique approximative. Cependant, en partie en raison du Règlement général sur la protection des données (RGPD), la plupart des navigateurs internet autorisent les utilisateurs à refuser les cookies de suivi Google Analytics7. À savoir qu'il est possible d'anonymiser l'IP des visiteurs via une configuration spécifique.Google Analytics soulève des problèmes de confidentialité. Chaque fois qu'un utilisateur visite un site web qui intègre Google Analytics, Google suit cette visite via l'adresse IP de l'utilisateur afin de déterminer sa position géographique approximative. Cependant, en partie en raison du Règlement général sur la protection des données (RGPD), la plupart des navigateurs internet autorisent les utilisateurs à refuser les cookies de suivi Google Analytics7. À savoir qu'il est possible d'anonymiser l'IP des visiteurs via une configuration spécifique.<br>En janvier 2015, l'agence Associated Press signale que le site HealthCare.gov a fourni l'accès aux données personnelles des utilisateurs, à des sociétés spécialisées dans la publicité, en mentionnant Google Analytics8.<br>Le 13 janvier 2022, l’autorité autrichienne de protection des données personnelles (Datenschutzbehörde ou DSB) estime qu’un site Internet portant sur le domaine de la santé ne respecte pas le RGPD dès lors qu'il utilise Google Analytics, du fait du transfert vers les États-Unis des données des internautes européens se rendant sur ce site9.</p>
     
     <a href='?q=analytics'>Faire une recherche</a>
-
+    
     <p>Pour la même raison, invoquant l’arrêt « Schrems II »10 de la Cour de justice de l’Union européenne en date du 16 juillet 2020, la CNIL déclare, le 10 février 2022, contraire à la loi sur les données personnelles en vigueur au sein de l'Union Européenne le recours à Google Analytics11,12,13.<br>Les utilisateurs de ce service sont donc contraints à recourir à d'autres outils d'analyses. En cela, le gendarme des données personnelles suggère plusieurs autres outils qu'il juge, après analyse, adéquats14. Toutefois, on peut penser qu'il laissera une période de tolérance aux gestionnaires de sites Internet afin de s'adapter. En effet, la migration d'un outil de web analyse vers un autre n'est pas toujours simple. Surtout lorsque l'implémentation n'a pas été réalisée à l'aide d'un gestionnaire de tags (TMS). Généralement, l'autorité administrative offre des délais assez longs concernant la mise en conformité, comme ça avait été le cas pour l'application de la directive ePrivacy.<br>En juin 2022, la CNIL tranche sur le fait qu'il reste impossible, à ce stade, de rendre légal l'utilisation de Google Analytics, et plus précisément conforme au RGPD15.<br>En janvier 2015, l'agence Associated Press signale que le site HealthCare.gov a fourni l'accès aux données personnelles des utilisateurs, à des sociétés spécialisées dans la publicité, en mentionnant Google Analytics8.<br>Le 13 janvier 2022, l’autorité autrichienne de protection des données personnelles (Datenschutzbehörde ou DSB) estime qu’un site Internet portant sur le domaine de la santé ne respecte pas le RGPD dès lors qu'il utilise Google Analytics, du fait du transfert vers les États-Unis des données des internautes européens se rendant sur ce site9.<br>Pour la même raison, invoquant l’arrêt « Schrems II »10 de la Cour de justice de l’Union européenne en date du 16 juillet 2020, la CNIL déclare, le 10 février 2022, contraire à la loi sur les données personnelles en vigueur au sein de l'Union Européenne le recours à Google Analytics11,12,13.<br>Les utilisateurs de ce service sont donc contraints à recourir à d'autres outils d'analyses. En cela, le gendarme des données personnelles suggère plusieurs autres outils qu'il juge, après analyse, adéquats14. Toutefois, on peut penser qu'il laissera une période de tolérance aux gestionnaires de sites Internet afin de s'adapter. En effet, la migration d'un outil de web analyse vers un autre n'est pas toujours simple. Surtout lorsque l'implémentation n'a pas été réalisée à l'aide d'un gestionnaire de tags (TMS). Généralement, l'autorité administrative offre des délais assez longs concernant la mise en conformité, comme ça avait été le cas pour l'application de la directive ePrivacy.<br>En juin 2022, la CNIL tranche sur le fait qu'il reste impossible, à ce stade, de rendre légal l'utilisation de Google Analytics, et plus précisément conforme au RGPD15.</p>
     
     <button id='custom'>Cliquer ici pour vous abonner à notre newsletter 📩</button>
@@ -55,9 +66,9 @@
     <p>La stratégie commerciale de Google quant à la rentabilisation du produit Analytics réside essentiellement dans la consommation en parallèle d'un autre service, AdWords, régie publicitaire payante. À titre d'indication, on peut lire sur le tableau d'administration d'Analytics : « Augmentez le trafic ciblé de votre site, utilisez AdWords avec votre compte Google Analytics ».</p>
     
     <a href='blabla.pdf' target='_blank'>Cliquez ici pour télécharger le PDF de la formation</a>
-
+    
     <br><br><button id="ot-sdk-btn" class="ot-sdk-show-settings">Paramétrer les cookies</button>
-
+    
     
 </body>
 </html>
