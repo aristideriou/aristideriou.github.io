@@ -14,14 +14,16 @@
     <title>Formation GA4 - Page démo</title>
 
     <script>
+        
+
         var dataLayer = [{
-            'pageCategory' : 'article',
-            'articleAuthor' : 'John Doe',
-            'articleLength' : 3254,
+            'pageCategory' : ["article", "category", "homepage"][Math.floor(Math.random() * 3)],
+            'articleAuthor' : ["John", "Barbara", "Paul"][Math.floor(Math.random() * 3)],
+            'articleLength' : Math.floor(Math.random() * (5000 - 300 + 1)) + 300, //Integer entre 300 et 5000
             'pageTags' : ['tag1','tag2','tag3'],
             'userID' : Math.round(Math.random()*10000000),
-            'environment' : 'production',
-            'publishDate' : 1642349680000
+            'environment' : ["Production", "UAT", "Staging"][Math.floor(Math.random() * 3)],
+            'publishDate' : Math.floor(new Date('2018-01-01').getTime() + Math.random() * (new Date('2023-12-31').getTime() - new Date('2018-01-01').getTime()))
         }]
     </script>
     
@@ -96,7 +98,8 @@
     const pushButton = document.getElementById('push');
     pushButton.addEventListener('click',()=> {
         const state = { 'page_id': 1, 'user_id': 5 };
-        const url = 'new-route.html';
+        const url = Array.from({ length: Math.floor(Math.random() * 6) + 5 }, () => Math.random().toString(36).charAt(2)).join('');
+
         
         history.pushState(state, '', url);
     });
