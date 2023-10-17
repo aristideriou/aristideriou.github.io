@@ -33,17 +33,19 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5SMKZLS');</script>
     
-    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="67642142-3a82-409d-b2e5-7149546b49fb" ></script>
+    <!-- <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="67642142-3a82-409d-b2e5-7149546b49fb" ></script>
     <script type="text/javascript">
         function OptanonWrapper() { }
-    </script>
+    </script> -->
+
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="229b3d35-7f14-456c-84d5-49b2776dc454" type="text/javascript" async></script>
+
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/229b3d35-7f14-456c-84d5-49b2776dc454/cd.js" type="text/javascript" async></script>
     
 </head>
 <body onload="displayIframe()">
     
     <h1>Formation GA4 - Page démo - Formateur</h1>
-    
-    <!-- <p>Le container GTM correspondant à cette page est : <b><span id="gtm-container"></span></b> </p> -->
     
     <button id='push'>Changer virtuellement l'URL et ajouter une route</button><br><br>
     <button id='origin'><a href="https://aristideriou.github.io/ga4_formation/index.html">Revenir à la route originale</a> </button>
@@ -73,8 +75,7 @@
     
     <a href='blabla.pdf' target='_blank'>Cliquez ici pour télécharger le PDF de la formation</a>
     
-    <br><br><button id="ot-sdk-btn" class="ot-sdk-show-settings">Paramétrerles cookies</button>
-    
+    <!-- <br><br><button id="ot-sdk-btn" class="ot-sdk-show-settings">Paramétrerles cookies</button> -->
     
 </body>
 </html>
@@ -136,25 +137,6 @@
             }
         })
     })
-</script>
-
-<script>
-    
-    function checkGTM(){
-        if(typeof google_tag_manager !== 'undefined'){
-            Object.keys(google_tag_manager).forEach(key => {
-                if(key.includes('GTM')){
-                    const gtmContainer = key;
-                    document.getElementById('gtm-container').innerHTML = key
-                }
-            })
-        }
-        else{
-            setTimeout(checkGTM, 500);
-        }
-    }
-    
-    checkGTM();
 </script>
 
     
