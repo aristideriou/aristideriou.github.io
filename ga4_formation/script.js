@@ -2,6 +2,8 @@
 const newsletterButton = document.getElementById("newsletter");
 newsletterButton.addEventListener("click", () => {
     newsletterButton.innerHTML = "Merci, vous êtes maintenant abonné";
+    window.dataLayer = window.dataLayer || [];
+
     dataLayer.push({
         event: "newsletterSubscription",
         clientType: ["Prospect", "Client", "Nouveau Client"][
@@ -29,8 +31,8 @@ pushButton.addEventListener("click", () => {
 
 const purchase = document.getElementById("purchase");
 purchase.addEventListener("click", () => {
-    purchase.innerHTML =
-    "Votre achat a été validé et votre carte bleue débitée";
+    purchase.innerHTML =  "Votre achat a été validé et votre carte bleue débitée";
+    window.dataLayer = window.dataLayer || [];
     dataLayer.push({
         event: "productPurchase",
         userEmail : ["pierredupont@gmail.com", "cmailledubois@yahoo.fr", "claude.martin@caramail.com"][Math.floor(Math.random() * 3)],
@@ -98,6 +100,9 @@ purchase.addEventListener("click", () => {
                         event.preventDefault();
                         
                         var linkLabel = event.currentTarget.querySelector('a').textContent;
+
+                        window.dataLayer = window.dataLayer || [];
+
                         
                         dataLayer.push({
                             'event': 'navTopClick',
