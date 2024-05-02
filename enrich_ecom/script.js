@@ -37,8 +37,8 @@ purchase.addEventListener("click", () => {
         event: "productPurchase",
         transactionID : ["111", "222", "333"][Math.floor(Math.random() * 3)],
         products : [
-            ["444", "555", "666"][Math.floor(Math.random() * 3)],
-            ["444", "555", "666"][Math.floor(Math.random() * 3)],
+            ["Fb9b-CBES5iJa5jP5Yh1BA", "F2ZUihOHQZam9xgdVWDVJA", "_cMwIQSbSYu14vpmdse3WQ"][Math.floor(Math.random() * 3)],
+            ["Fb9b-CBES5iJa5jP5Yh1BA", "F2ZUihOHQZam9xgdVWDVJA", "_cMwIQSbSYu14vpmdse3WQ"][Math.floor(Math.random() * 3)],
         ]
                     });
                 });
