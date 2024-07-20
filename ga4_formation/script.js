@@ -112,3 +112,11 @@ purchase.addEventListener("click", () => {
                 });
                 
                 
+
+                document.getElementById('demoForm').addEventListener('submit', function(event) {
+                    // event.preventDefault();
+                    const formData = new FormData(event.target);
+                    const queryString = new URLSearchParams(formData).toString();
+                    console.log('Form submitted with GET data:', queryString);
+                    // alert('Formulaire soumis !'); 
+                });
