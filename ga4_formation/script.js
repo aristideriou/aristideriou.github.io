@@ -35,6 +35,7 @@ purchase.addEventListener("click", () => {
     window.dataLayer = window.dataLayer || [];
     dataLayer.push({
         event: "productPurchase",
+        purchaseTimestamp : Date.now(),
         userEmail : ["pierredupont@gmail.com", "cmailledubois@yahoo.fr", "claude.martin@caramail.com"][Math.floor(Math.random() * 3)],
         userFirstName : ["Pierre", "Camille", "Claude"][Math.floor(Math.random() * 3)] ,
         userLastName : ["Dupont", "Dubois", "Martin"][Math.floor(Math.random() * 3)] ,
